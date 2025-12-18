@@ -4,17 +4,18 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 
 /**
- * 採点用テストクラス
+ * テストクラス（テストの活用は任意であり、課題の評価には影響しません）
  *
- * 【注意】
- * - 学生はこのファイルを編集してはいけません。
- *   （改変すると自動採点が正しく行われない可能性があります）
- * - ローカルテストでは、以下の「公開テストケース」だけが実行されます。
- *   実際の採点時は、「非公開テストケース」も実行されます。
- *   したがって、サンプル入力に合わせたハードコードでは点が取れません。
+ * 【ヒント】
+ * - 必要に応じて、テストケースを追加・修正してください。
+ * - 課題の評価にあたって、テストの有無や通過状況は考慮されません。
+ * - ただしテストコード作成をメンバーの役割として位置付けることは可能です。
+ * - .github/workflows/auto-test.yml により、リポジトリをプッシュするたびにGitHub上で自動テストが実行されるようにしています。
+ * - ローカル環境でJUnitテストを実行することも可能です。
  */
 class MainTest {
 
+    // 標準入力を与えて標準出力を取得するユーティリティメソッド
     private String runWithInput(String input) throws Exception {
         InputStream oldIn = System.in;
         PrintStream oldOut = System.out;
@@ -31,11 +32,17 @@ class MainTest {
         }
     }
 
+    // 直接指定のソースコードをテストする場合のユーティリティメソッド
+    private void runWithMethod() throws Exception {
+        // ここに直接メソッドを呼び出すコードを記述することも可能
+        // assertEquals("8", Main.myMethod(3, 5));
+    }
+
     
-    // ===== 公開テストケース =====
+    // ===== テストケース =====
 
     @Test
-    void testSample1() throws Exception {
+    void testSample() throws Exception {
         assertEquals("8", runWithInput("3 5\n"));
     }
 
