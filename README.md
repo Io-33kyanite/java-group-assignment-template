@@ -25,13 +25,15 @@ aprog2-final-group-working
 4. src/main/java/ 以下にJavaのソースコードを配置してください。
 5. src/main/resources/ 以下にリソースファイルを配置してください。ただし、リソースの活用は任意であり、課題の評価には影響しません。
 6. src/test/java/ 以下にテストコードを配置してください。ただし、テストの活用は任意であり、課題の評価には影響しません。
+   * リモートでの自動テスト（GitHub Actions）を有効にするには、.github/workflows/auto-test.ymlを用意する必要があります。
+   * サンプルファイル（auto-test.yml.disabled）をそのまま使う場合は、auto-test.ymlにリネームしてください。内容は編集不要です。
 
 
-## スターターファイルの説明
+## その他、スターターファイルの説明
 
 * build.gradleは、ビルドや依存関係の管理に使用されます。必要に応じて編集してください。
 * settings.gradleは、Gradleの設定ファイルです。**編集は不要です。**
-* .github/workflows/auto-test.ymlは、GitHub Actionsのワークフローファイルで、GitHub上で自動テストを実行するための設定が含まれています。 **通常、編集は不要です。**
+* .github/workflows/auto-test.yml.disabledは、GitHub上で自動テストを実行するためのサンプル設定が含まれています。 **編集は不要です。有効にしたい場合は、auto-test.ymlにリネームしてください。**
 * gradlew（UNIX系OS用）およびgradlew.bat（Windows用）は、Gradle Wrapperの実行スクリプトです。これらを使用して、プロジェクトのビルドやテストの実行が可能です。**編集は不要です。**
 * gradle/wrapper/ 以下は、Gradle Wrapperに関連するファイルが含まれています。**編集は不要です。**
 * .gitignoreは、Gitで管理しないファイルやディレクトリを指定するためのファイルです。**編集は不要です。**
