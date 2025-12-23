@@ -32,18 +32,19 @@ class MainTest {
         }
     }
 
-    // 直接指定のソースコードをテストする場合のユーティリティメソッド
-    private void runWithMethod() throws Exception {
-        // ここに直接メソッドを呼び出すコードを記述することも可能
-        // assertEquals("8", Main.myMethod(3, 5));
-    }
-
     
     // ===== テストケース =====
 
     @Test
     void testSample() throws Exception {
+        // 標準入力を与えて標準出力を検証する例
         assertEquals("8", runWithInput("3 5\n"));
+    }
+
+    @Test
+    void testMyMethod() throws Exception {
+        // 直接メソッドをテストする場合の例
+        // assertEquals("ExpectedOutput", Main.myMethod("Input"));
     }
 
 }
